@@ -49,20 +49,22 @@ function draw(){
 
         status=song1.isPlaying();
         console.log(status);
-    if (scoreLeftWrist > 0.2 && status ="false"){
+    if (scoreLeftWrist > 0.2){
         circle(LeftWristX,LeftWristY,20);
         song2.stop();
-        song1.play();
-        document.getElementById("heading").innerHTML="Heat Waves";
+        if (status="false"){song1.play();
+        document.getElementById("heading").innerHTML="Heat Waves";}
+        
 
     }
 
     statoos=song2.isPlaying();
     console.log(statoos);
-    if(scoreRightWrist>0.2 && statoos = "true"){
+    if(scoreRightWrist>0.2){
         circle(RightWristX,RightWristY,20);
         song1.stop();
-        song2.play();
-        document.getElementById("heading").innerHTML="Unstoppable";
+        if(statoos = "true"){song2.play();
+        document.getElementById("heading").innerHTML="Unstoppable";}
+        
     }
 }
